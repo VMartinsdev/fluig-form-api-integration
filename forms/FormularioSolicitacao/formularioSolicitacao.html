@@ -1,0 +1,147 @@
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide-flat.min.css"/>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+</head>
+<body>
+<div class="fluig-style-guide">
+<form name="form" role="form">
+	<div class="panel panel-primary">
+		<div class="panel-heading">
+		    <h3 class="panel-title"><i class="animaliaicon animaliaicon-user icon-xl" aria-hidden="true"></i> Dados solicitante</h3>
+		</div>
+		<div class="panel-body">
+			<div class="row">
+				<div class="form-group col-md-4">
+		        	<label for="solicitanteNome">Nome</label>
+		        	<input type="text" class="form-control" id="solicitanteNome" name="solicitanteNome" required>
+		    	</div>
+		    	<div class="form-group col-md-4">
+					<label for="solicitanteEmail">e-mail</label>
+					<input type="email" class="form-control" id="solicitanteEmail" name="solicitanteEmail" required>
+				</div>
+				<div class="form-group col-md-4">
+					<label for="solicitanteTelefone">Telefone</label>
+					<input type="text" class="form-control" id="solicitanteTelefone" name="solicitanteTelefone" mask="(00)00000-0000" required>
+				</div>
+			</div>
+			<div class="row">
+				<div class="form-group col-md-3">
+		        	<label for="solicitanteCep">CEP</label>
+		        	<input type="text" class="form-control" id="solicitanteCep" name="solicitanteCep" mask="00000-000" required>
+		    	</div>
+		    	<div class="form-group col-md-4">
+					<label for="solicitanteLogradouro">Logradouro</label>
+					<input type="text" class="form-control" id="solicitanteLogradouro" name="solicitanteLogradouro" required>
+				</div>
+				<div class="form-group col-md-2">
+					<label for="solicitanteBairro">Bairro</label>
+					<input type="text" class="form-control" id="solicitanteBairro" name="solicitanteBairro" required>
+				</div>
+				<div class="form-group col-md-2">
+					<label for="SolicitanteNumeroLogradouro">Número</label>
+					<input type="text" class="form-control" id="SolicitanteNumeroLogradouro" name="SolicitanteNumeroLogradouro" required>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="panel panel-primary">
+		<div class="panel-heading">
+		    <h3 class="panel-title"><i class="animaliaicon animaliaicon-money-wavy icon-xl" aria-hidden="true"></i> Dados Despesa</h3>
+		</div>
+		<div class="panel-body">
+			<div class="row">
+				<div class="form-group col-md-4">
+		        	<label for="despesaTipo">Tipo de despesa</label>
+		        	<select class="form-control" name="despesaTipo" id="despesaTipo">
+						<option>Alimentação</option>
+						<option>Deslocamento</option>
+						<option>Hospedagem</option>
+					</select>
+		    	</div>
+		    	<div class="form-group col-md-2">
+					<label for="despesaValor">Valor</label>
+					<input type="number" class="form-control" id="despesaValor" name="despesaValor" required>
+				</div>
+				<div class="form-group col-md-2">
+					<label for="despesaData">Data</label>
+					<input type="text" class="form-control" id="despesaData" name="despesaData" />
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="panel panel-primary">
+		<div class="panel-heading">
+		    <h3 class="panel-title"><i class="animaliaicon animaliaicon-user-check icon-xl" aria-hidden="true"></i>Autorização </h3>
+		</div>
+		<div class="panel-body">
+		<div class="form-group">
+		    <label for="user">Responsável Autorização</label>
+		    <input type="zoom" class="form-control" id="autorizacaoResponsavel" name="autorizacaoResponsavel" data-zoom="
+		        {
+		            'displayKey':'colleagueName',
+		            'placeholder': 'Selecione o usuário do Fluig',
+		            'datasetId':'colleague',
+		            'fields':[{
+		                'field':'colleagueName',
+		                'label':'colleagueName',
+		                'standard':true
+		            }]
+		        }">
+		</div>
+			<div class="form-group row">
+				<div class="form-group col-md-2">
+		        	<label for="isAutorizado">Solicitação Aprovada</label>
+		        	<select class="form-control" name="isAutorizado" id="isAutorizado">
+						<option></option>
+						<option value="true">Sim</option>
+						<option value="false">Não</option>
+					</select>
+		    	</div>
+		    	<div class="form-group col-md-2">
+					<label for="despesaData">Data</label>
+					<input type="text" class="form-control" id="autorizacaoData" name="autorizacaoData" />
+				</div>
+			</div>
+			<div class="form-group fs-display-none" id="containerAutoriazacaoMotivoRecusa">
+					<label for="despesaData">Motivo da recusa</label>
+					<input type="textarea" class="form-control" id="autoriazacaoMotivoRecusa" name="autoriazacaoMotivoRecusa" />
+			</div>            	 
+		</div>
+	</div>
+</form>
+</div>
+<script>
+	var despesaDataCalendar = FLUIGC.calendar('#despesaData');
+	var autorizacaoDataCalendar = FLUIGC.calendar('#autorizacaoData');
+	
+	$("#isAutorizado").change(function() {
+        controlarMotivoRecusa();
+    });
+	
+	function controlarMotivoRecusa() {
+
+	    var valor = $("#isAutorizado").val();
+
+	    if (valor == "false") {
+	        $("#containerAutoriazacaoMotivoRecusa").removeClass("fs-display-none");
+	    } else {
+	        $("#containerAutoriazacaoMotivoRecusa").addClass("fs-display-none");
+	    }
+	}
+	
+	
+	$("#solicitanteCep").on("blur", function() {
+	    $.getJSON("//viacep.com.br/ws/" +$('#solicitanteCep').val() + "/json", function(dados){
+	    	
+	    	$("#solicitanteLogradouro").val(dados.logradouro);
+	    	$("#solicitanteBairro").val(dados.bairro);
+	    })
+	});
+	
+</script>
+</body>
+</html>
