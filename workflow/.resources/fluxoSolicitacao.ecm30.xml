@@ -28,10 +28,10 @@
     <processDefinitionVersionPK>
       <companyId>1</companyId>
       <processId>fluxoSolicitacao</processId>
-      <version>2</version>
+      <version>1</version>
     </processDefinitionVersionPK>
     <versionDescription></versionDescription>
-    <formId>76</formId>
+    <formId>3</formId>
     <formIdV2>0</formIdV2>
     <editionMode>true</editionMode>
     <updateAttachmentsVersion>false</updateAttachmentsVersion>
@@ -111,8 +111,7 @@
       <deadlineFieldName></deadlineFieldName>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
-      <engineAllocationId>Pool Grupo</engineAllocationId>
-      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Group&gt;Aprov_BRA&lt;/Group&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationId></engineAllocationId>
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>true</notifyAuthorityDelay>
@@ -280,7 +279,7 @@
         <companyId>1</companyId>
         <processId>fluxoSolicitacao</processId>
         <expressionOrder>1</expressionOrder>
-        <version>2</version>
+        <version>1</version>
         <sequence>6</sequence>
       </conditionProcessStatePK>
       <condition></condition>
@@ -390,7 +389,134 @@
   <list/>
   <list/>
   <list/>
-  <list/>
+  <list>
+    <ProcessFormField>
+      <processFormFieldPK>
+        <companyId>1</companyId>
+        <processId>fluxoSolicitacao</processId>
+        <fieldId>despesaData</fieldId>
+      </processFormFieldPK>
+      <fieldDescription>despesaData</fieldDescription>
+      <slotId>1</slotId>
+    </ProcessFormField>
+    <ProcessFormField>
+      <processFormFieldPK>
+        <companyId>1</companyId>
+        <processId>fluxoSolicitacao</processId>
+        <fieldId>isAutorizado</fieldId>
+      </processFormFieldPK>
+      <fieldDescription>isAutorizado</fieldDescription>
+      <slotId>2</slotId>
+    </ProcessFormField>
+    <ProcessFormField>
+      <processFormFieldPK>
+        <companyId>1</companyId>
+        <processId>fluxoSolicitacao</processId>
+        <fieldId>solicitanteLogradouro</fieldId>
+      </processFormFieldPK>
+      <fieldDescription>solicitanteLogradouro</fieldDescription>
+      <slotId>3</slotId>
+    </ProcessFormField>
+    <ProcessFormField>
+      <processFormFieldPK>
+        <companyId>1</companyId>
+        <processId>fluxoSolicitacao</processId>
+        <fieldId>solicitanteTelefone</fieldId>
+      </processFormFieldPK>
+      <fieldDescription>solicitanteTelefone</fieldDescription>
+      <slotId>4</slotId>
+    </ProcessFormField>
+    <ProcessFormField>
+      <processFormFieldPK>
+        <companyId>1</companyId>
+        <processId>fluxoSolicitacao</processId>
+        <fieldId>despesaTipo</fieldId>
+      </processFormFieldPK>
+      <fieldDescription>despesaTipo</fieldDescription>
+      <slotId>5</slotId>
+    </ProcessFormField>
+    <ProcessFormField>
+      <processFormFieldPK>
+        <companyId>1</companyId>
+        <processId>fluxoSolicitacao</processId>
+        <fieldId>despesaValor</fieldId>
+      </processFormFieldPK>
+      <fieldDescription>despesaValor</fieldDescription>
+      <slotId>6</slotId>
+    </ProcessFormField>
+    <ProcessFormField>
+      <processFormFieldPK>
+        <companyId>1</companyId>
+        <processId>fluxoSolicitacao</processId>
+        <fieldId>solicitanteCep</fieldId>
+      </processFormFieldPK>
+      <fieldDescription>solicitanteCep</fieldDescription>
+      <slotId>7</slotId>
+    </ProcessFormField>
+    <ProcessFormField>
+      <processFormFieldPK>
+        <companyId>1</companyId>
+        <processId>fluxoSolicitacao</processId>
+        <fieldId>solicitanteEmail</fieldId>
+      </processFormFieldPK>
+      <fieldDescription>solicitanteEmail</fieldDescription>
+      <slotId>8</slotId>
+    </ProcessFormField>
+    <ProcessFormField>
+      <processFormFieldPK>
+        <companyId>1</companyId>
+        <processId>fluxoSolicitacao</processId>
+        <fieldId>autorizacaoResponsavel</fieldId>
+      </processFormFieldPK>
+      <fieldDescription>autorizacaoResponsavel</fieldDescription>
+      <slotId>9</slotId>
+    </ProcessFormField>
+    <ProcessFormField>
+      <processFormFieldPK>
+        <companyId>1</companyId>
+        <processId>fluxoSolicitacao</processId>
+        <fieldId>autorizacaoData</fieldId>
+      </processFormFieldPK>
+      <fieldDescription>autorizacaoData</fieldDescription>
+      <slotId>10</slotId>
+    </ProcessFormField>
+    <ProcessFormField>
+      <processFormFieldPK>
+        <companyId>1</companyId>
+        <processId>fluxoSolicitacao</processId>
+        <fieldId>solicitanteBairro</fieldId>
+      </processFormFieldPK>
+      <fieldDescription>solicitanteBairro</fieldDescription>
+      <slotId>11</slotId>
+    </ProcessFormField>
+    <ProcessFormField>
+      <processFormFieldPK>
+        <companyId>1</companyId>
+        <processId>fluxoSolicitacao</processId>
+        <fieldId>SolicitanteNumeroLogradouro</fieldId>
+      </processFormFieldPK>
+      <fieldDescription>SolicitanteNumeroLogradouro</fieldDescription>
+      <slotId>12</slotId>
+    </ProcessFormField>
+    <ProcessFormField>
+      <processFormFieldPK>
+        <companyId>1</companyId>
+        <processId>fluxoSolicitacao</processId>
+        <fieldId>solicitanteNome</fieldId>
+      </processFormFieldPK>
+      <fieldDescription>solicitanteNome</fieldDescription>
+      <slotId>13</slotId>
+    </ProcessFormField>
+    <ProcessFormField>
+      <processFormFieldPK>
+        <companyId>1</companyId>
+        <processId>fluxoSolicitacao</processId>
+        <fieldId>autoriazacaoMotivoRecusa</fieldId>
+      </processFormFieldPK>
+      <fieldDescription>autoriazacaoMotivoRecusa</fieldDescription>
+      <slotId>14</slotId>
+    </ProcessFormField>
+  </list>
   <list/>
   <list/>
   <list>
@@ -398,7 +524,7 @@
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>fluxoSolicitacao</processId>
-      <processVersion>2</processVersion>
+      <processVersion>1</processVersion>
       <stateSequence>2</stateSequence>
       <appKey>approval</appKey>
       <appField>title</appField>
@@ -408,7 +534,7 @@
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>fluxoSolicitacao</processId>
-      <processVersion>2</processVersion>
+      <processVersion>1</processVersion>
       <stateSequence>2</stateSequence>
       <appKey>approval</appKey>
       <appField>description</appField>
@@ -418,7 +544,7 @@
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>fluxoSolicitacao</processId>
-      <processVersion>2</processVersion>
+      <processVersion>1</processVersion>
       <stateSequence>2</stateSequence>
       <appKey>approval</appKey>
       <appField>highlight</appField>
@@ -428,7 +554,7 @@
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>fluxoSolicitacao</processId>
-      <processVersion>2</processVersion>
+      <processVersion>1</processVersion>
       <stateSequence>2</stateSequence>
       <appKey>approval</appKey>
       <appField>approve</appField>
@@ -438,7 +564,7 @@
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>fluxoSolicitacao</processId>
-      <processVersion>2</processVersion>
+      <processVersion>1</processVersion>
       <stateSequence>2</stateSequence>
       <appKey>approval</appKey>
       <appField>reject</appField>
@@ -448,7 +574,7 @@
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>fluxoSolicitacao</processId>
-      <processVersion>2</processVersion>
+      <processVersion>1</processVersion>
       <stateSequence>4</stateSequence>
       <appKey>approval</appKey>
       <appField>title</appField>
@@ -458,7 +584,7 @@
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>fluxoSolicitacao</processId>
-      <processVersion>2</processVersion>
+      <processVersion>1</processVersion>
       <stateSequence>4</stateSequence>
       <appKey>approval</appKey>
       <appField>description</appField>
@@ -468,7 +594,7 @@
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>fluxoSolicitacao</processId>
-      <processVersion>2</processVersion>
+      <processVersion>1</processVersion>
       <stateSequence>4</stateSequence>
       <appKey>approval</appKey>
       <appField>highlight</appField>
@@ -478,7 +604,7 @@
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>fluxoSolicitacao</processId>
-      <processVersion>2</processVersion>
+      <processVersion>1</processVersion>
       <stateSequence>4</stateSequence>
       <appKey>approval</appKey>
       <appField>approve</appField>
@@ -488,7 +614,7 @@
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>fluxoSolicitacao</processId>
-      <processVersion>2</processVersion>
+      <processVersion>1</processVersion>
       <stateSequence>4</stateSequence>
       <appKey>approval</appKey>
       <appField>reject</appField>
